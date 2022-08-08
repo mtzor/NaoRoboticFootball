@@ -11,7 +11,7 @@
 
  Some of the features mentioned above are:
 
- +Player collision avoidance feature is designed, utilising the sonar sensors and bumpers of each robot
+ +Player collision avoidance feature is designed, utilising the sonar sensors and bumpers of each robot        
  +Player shooting motion is incorporated 
 
  The resulting complete world is provided on this repository. That includes both the files provided by the Webots 
