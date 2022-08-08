@@ -1,0 +1,295 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  info [
+    "Simulation of the Robocup Standard Platform League"
+  ]
+  title "Robotstadium"
+  basicTimeStep 40
+  contactProperties [
+    ContactProperties {
+      material1 "NAO foot material"
+      coulombFriction [
+        7
+      ]
+      bounce 0.3
+      bounceVelocity 0.003
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.9940553217200266 0.05175668933605023 0.09578759037091378 1.2282173864277228
+  position 1.6952388381228976 -10.500611202883436 3.353451936156124
+  follow "ball"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RobotstadiumSoccerField {
+  rotation 1 0 0 1.5707963267948966
+  frame1Color 0.9 0.8 0.2
+  frame2Color 0.2 0.4 0.8
+}
+DEF BALL Ball {
+  translation 0 0.0325 0.03
+  rotation 1 0 0 1.5707963267948966
+}
+Robot {
+  rotation 1 0 0 1.5707963267948966
+  children [
+    Emitter {
+      channel -1
+    }
+    Receiver {
+      channel 2
+    }
+  ]
+  name "soccer referee"
+  controller "nao_soccer_supervisor"
+  supervisor TRUE
+}
+DEF GOAL_KEEPER_0 Nao {
+  hidden rotation_22 9.616917175258797e-16 1 -1.0243668051876147e-15 0.9600000032962803
+  hidden rotation_23 -7.212687946191705e-16 1 -9.61691726158894e-16 0.959999993949333
+  hidden rotation_24 -9.616917231341163e-16 1 6.010573269588228e-16 0.9599999972242534
+  hidden rotation_25 9.616917175268303e-16 1 -9.044409438411757e-16 0.9600000032952508
+  hidden rotation_26 1.2021146576959023e-16 0.9999999999999999 -1.3824318563502882e-15 0.9599999939516843
+  hidden rotation_27 -9.616917231336387e-16 0.9999999999999999 1.081903188525344e-15 0.9599999972247709
+  hidden rotation_29 -7.813745241989693e-16 -1 -2.486558875928376e-16 0.9599999983535916
+  hidden rotation_34 3.60634394051253e-16 1 -6.214965202394656e-17 0.9600000033567726
+  hidden rotation_35 2.4042293152846557e-16 1 -1.2021146576423278e-16 0.9599999939980889
+  hidden rotation_36 3.606343961719286e-16 1 1.2021146539064288e-16 0.959999997233969
+  hidden rotation_37 4.2074012639301076e-16 1 -6.223046071702244e-17 0.9600000033570635
+  hidden rotation_38 -3.6063439729327974e-16 1 -2.4042293152885314e-16 0.9599999939964098
+  hidden rotation_39 1.2021146539066684e-16 1 1.2021146539066684e-16 0.9599999972337613
+  hidden rotation_41 1.2021146526024814e-16 -1 -2.4167818086572716e-16 0.9599999983633937
+  translation -3 0 0.35
+  rotation 1 0 0 4.692820414042842e-06
+  degreeOfFreedom 21
+  color 0.8 0.8 0.8
+  controller "nao_team_1"
+  controllerArgs [
+    "0"
+    "0"
+  ]
+  synchronization FALSE
+  jersey NaoJersey {
+  }
+}
+DEF PLAYER_1_0 Nao {
+  hidden rotation_22 -3.305815591820878e-16 0.9999999999999999 6.010572695967488e-17 0.9599999724702362
+  hidden rotation_23 2.4042293664256907e-16 1 1.2021146652999407e-16 0.9599999873653827
+  hidden rotation_24 1.2021148017541963e-16 1 -1.5026433125678614e-16 0.9600000005705319
+  hidden rotation_25 -3.4560800710472795e-16 1 1.2021144319286168e-16 0.9599999722861365
+  hidden rotation_26 4.808458590065058e-16 0.9999999999999999 2.404229474161572e-16 0.9599999872534509
+  hidden rotation_27 -1.2021147603335039e-16 1 -3.906872541034243e-16 0.9600000005680209
+  hidden rotation_29 -6.761897617366674e-17 -1 1.2021149677746754e-16 0.9599999968940687
+  hidden rotation_34 -6.010570426059334e-17 0.9999999999999999 6.010571321704549e-17 0.95999999332034
+  hidden rotation_35 1.2021132330852797e-16 1 1.8031718558732137e-16 0.9599999866571324
+  hidden rotation_36 5.732129349764192e-23 0.9999999999999999 -3.005278034335143e-17 0.9599999980089733
+  hidden rotation_37 1.352379134028386e-16 1 -9.01586244597428e-17 0.9599999933224596
+  hidden rotation_38 -4.299097059096041e-23 1 -1.8031722140903293e-16 0.9599999866807919
+  hidden rotation_39 3.6063438785354695e-16 1 -1.5026425960617852e-16 0.9600000005635385
+  hidden rotation_41 3.756619043075033e-18 -1 6.010572556015811e-17 0.959999996714302
+  translation -2.325 0.35 0.35
+  rotation 1 0 0 4.692820414042842e-06
+  name "nao(1)"
+  degreeOfFreedom 21
+  color 0.8 0.8 0.8
+  controller "nao_team_1"
+  controllerArgs [
+    "1"
+    "0"
+  ]
+  synchronization FALSE
+  jersey NaoJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/softbank/nao/protos/textures/nao_2_red.png"
+    ]
+  }
+}
+DEF PLAYER_2_0 Nao {
+  hidden rotation_22 1.502643067553337e-16 1 2.1037005525204983e-16 0.9599999717503593
+  hidden rotation_23 2.4042294743709843e-16 1 5.409516353160527e-16 0.9599999871627591
+  hidden rotation_24 -2.4042291242882585e-16 1 -6.010575399695078e-17 0.9600000005921628
+  hidden rotation_25 3.7566080918024935e-16 1 4.2074011960908006e-16 0.9599999935476666
+  hidden rotation_26 3.6063439967052653e-16 1 6.010574044358285e-17 0.9599999871328356
+  hidden rotation_27 -8.732540784651425e-24 1 -2.103700565908066e-16 0.960000000588015
+  hidden rotation_29 -4.695760511893639e-16 -1 -6.01056968921487e-17 0.9599999968418459
+  hidden rotation_34 9.015858686897625e-17 1 4.119968071746627e-23 0.9599999723311327
+  hidden rotation_35 1.8031726968183552e-16 1 -2.404229450372816e-16 0.9599999975558664
+  hidden rotation_36 -6.010573393513085e-16 1 -9.015868473508782e-17 0.9600000005812019
+  hidden rotation_37 4.507932925995006e-17 1 -1.202114521431927e-16 0.9599999723391566
+  hidden rotation_38 -2.404229450136722e-16 1 -2.404229665091571e-16 0.9599999976581135
+  hidden rotation_39 1.2021145097082648e-16 1 1.502643602870841e-16 0.9599999980091194
+  hidden rotation_41 1.4330323354584316e-23 -1 9.015857019049292e-17 0.9599999994495158
+  translation -2.325 1.575 0.35
+  rotation 1 0 0 4.692820414042842e-06
+  name "nao(2)"
+  degreeOfFreedom 21
+  color 0.8 0.8 0.8
+  controller "nao_team_1"
+  controllerArgs [
+    "2"
+    "0"
+  ]
+  synchronization FALSE
+  jersey NaoJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/softbank/nao/protos/textures/nao_3_red.png"
+    ]
+  }
+}
+DEF PLAYER_3_0 Nao {
+  hidden rotation_22 3.005286708324819e-17 1 1.502643425814028e-16 0.9599999717485596
+  hidden rotation_23 4.808458590476477e-16 0.9999999999999999 -2.4042295460189003e-16 0.9599999871643622
+  hidden rotation_24 -6.010573463002818e-16 1 -1.2021144350745773e-16 0.9600000005920661
+  hidden rotation_25 -2.554493433637566e-16 1 1.0747742576847714e-23 0.9599999935487168
+  hidden rotation_26 2.4042293669655053e-16 1 -1.2021150238279362e-16 0.9599999871316003
+  hidden rotation_27 -1.2021150108110146e-16 1 -9.015859158738299e-17 0.9600000005881669
+  hidden rotation_29 -3.3058151740978124e-16 -1 2.7047580081342887e-16 0.9599999968416891
+  hidden rotation_34 2.554493414037691e-16 0.9999999999999999 2.704758376321364e-16 0.9599999723322199
+  hidden rotation_35 1.2021152267469533e-16 1 -2.404229092113187e-16 0.9599999975565353
+  hidden rotation_36 -2.4042298732994276e-16 1 2.1036994911498148e-16 0.9600000005800959
+  hidden rotation_37 4.95872277929978e-16 1 1.202115022989129e-16 0.9599999723427326
+  hidden rotation_38 -1.202114223511027e-16 1 -4.2074010720176974e-16 0.9599999976546625
+  hidden rotation_39 -1.2021143664106628e-16 1 9.015855598531466e-17 0.9599999980042417
+  hidden rotation_41 -1.0518503199305526e-16 -1 -2.103699923344937e-16 0.9599999994489316
+  translation -2.325 -1.575 0.35
+  rotation 1 0 0 4.692820414042842e-06
+  name "nao(3)"
+  degreeOfFreedom 21
+  color 0.8 0.8 0.8
+  controller "nao_team_1"
+  controllerArgs [
+    "3"
+    "0"
+  ]
+  synchronization FALSE
+  jersey NaoJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/softbank/nao/protos/textures/nao_4_red.png"
+    ]
+  }
+}
+DEF PLAYER_4_0 Nao {
+  hidden rotation_22 5.37387137241515e-23 1 -2.1495485489660597e-23 0.9599999772748712
+  hidden rotation_23 1.4330323485373344e-23 1 -1.7912904356716682e-23 0.9599999899465639
+  hidden rotation_24 -4.2990970078603286e-23 0.9999999999999999 2.866064671906885e-23 0.9599999990898469
+  hidden rotation_25 3.9408390064201346e-23 1 -7.16516182985479e-24 0.959999977279532
+  hidden rotation_26 0 1 4.6573551327515094e-23 0.9599999899454074
+  hidden rotation_27 1.4330323359527852e-23 1 -6.090387427799334e-23 0.959999999090325
+  hidden rotation_29 -5.194742225463816e-23 -0.9999999999999999 1.4330323380589833e-23 0.9599999975599902
+  hidden rotation_34 -1.7912904574191574e-23 1 3.224322823354483e-23 0.9599999773054216
+  hidden rotation_35 3.582580871296585e-23 1 -7.16516174259317e-24 0.9599999899601516
+  hidden rotation_36 -7.702548805747097e-23 1 -5.732129343811792e-23 0.9599999990902066
+  hidden rotation_37 -1.4330323659270836e-23 1 1.7912904574088544e-23 0.9599999773114111
+  hidden rotation_38 1.343467826737761e-23 1 -2.1495485227804176e-23 0.9599999899589566
+  hidden rotation_39 -6.269516469795131e-23 1 -3.9408389238712254e-23 0.9599999990900436
+  hidden rotation_41 5.373871267712992e-24 -1 7.165161690283989e-24 0.9599999975615784
+  translation -2.325 -0.35 0.35
+  rotation 1 0 0 4.692820414042842e-06
+  name "nao(4)"
+  degreeOfFreedom 21
+  color 0.8 0.8 0.8
+  controller "nao_team_1"
+  controllerArgs [
+    "4"
+    "0"
+  ]
+  synchronization FALSE
+  jersey NaoJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/softbank/nao/protos/textures/nao_5_red.png"
+    ]
+  }
+}
+DEF GOAL_KEEPER_1 RobotisOp2 {
+  translation 3 -0.1 0.236
+  rotation 7.19233e-09 -1.49483e-14 1 3.14159
+  controller "void"
+  controllerArgs [
+    "0"
+    "1"
+  ]
+  synchronization FALSE
+  jersey RobotisJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/robotis/darwin-op/protos/textures/robotis-op2_1_blue.png"
+    ]
+    jerseyColor 0.16 0.7 0.86
+  }
+  channel 1
+}
+DEF PLAYER_1_1 RobotisOp2 {
+  translation 0.675 0 0.236
+  rotation 0 0 1 3.14159
+  name "ROBOTIS OP2(1)"
+  controller "void"
+  controllerArgs [
+    "1"
+    "1"
+  ]
+  synchronization FALSE
+  jersey RobotisJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/robotis/darwin-op/protos/textures/robotis-op2_2_blue.png"
+    ]
+    jerseyColor 0.16 0.7 0.86
+  }
+  channel 1
+}
+DEF PLAYER_2_1 RobotisOp2 {
+  translation 1.2 -1.125 0.236
+  rotation 7.19233e-09 -1.49483e-14 1 3.14159
+  name "ROBOTIS OP2(2)"
+  controller "void"
+  controllerArgs [
+    "2"
+    "1"
+  ]
+  synchronization FALSE
+  jersey RobotisJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/robotis/darwin-op/protos/textures/robotis-op2_3_blue.png"
+    ]
+    jerseyColor 0.16 0.7 0.86
+  }
+  channel 1
+}
+DEF PLAYER_3_1 RobotisOp2 {
+  translation 2.325 1.125 0.236
+  rotation 7.19233e-09 -1.49483e-14 1 3.14159
+  name "ROBOTIS OP2(3)"
+  controller "void"
+  controllerArgs [
+    "3"
+    "1"
+  ]
+  synchronization FALSE
+  jersey RobotisJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/robotis/darwin-op/protos/textures/robotis-op2_4_blue.png"
+    ]
+    jerseyColor 0.16 0.7 0.86
+  }
+  channel 1
+}
+DEF PLAYER_4_1 RobotisOp2 {
+  translation 2.325 -1.125 0.236
+  rotation 1.66050981344088e-07 0.1305259853353393 -0.9914448886106636 -3.1415853071795863
+  name "ROBOTIS OP2(4)"
+  controller "void"
+  controllerArgs [
+    "4"
+    "1"
+  ]
+  synchronization FALSE
+  jersey RobotisJersey {
+    jerseyTexture [
+      "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/robots/robotis/darwin-op/protos/textures/robotis-op2_5_blue.png"
+    ]
+    jerseyColor 0.16 0.7 0.86
+  }
+  channel 1
+}
